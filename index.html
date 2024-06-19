@@ -59,6 +59,20 @@
         .certification-card p {
             margin: 10px 0;
         }
+        .language-level {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-color: #ddd;
+            margin-right: 2px;
+        }
+        .language-level.active {
+            background-color: #0056b3;
+        }
+        .language-level:hover {
+            background-color: #004080;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -117,16 +131,33 @@
             <p>Alessio holds dual Master’s degrees in Project Management from Rome Business School and Universidad Internacional de Valencia. He has also earned a Master's degree in Teaching Italian as a Second Language from Università degli Studi Giustino Fortunato and another in Didactic and Promotion of the Italian Language and Culture to Foreigners from Università Ca' Foscari Venezia.</p>
         </section>
         <section id="skills">
-            <h2>Languages and Skills</h2>
-                <ul>
-                    <li>🇮🇹 Italian (Native or Bilingual)</li>
-                    <li>🇬🇧 English (Full Professional)</li>
-                    <li>🇫🇷 French (Professional Working)</li>
-                    <li>🇪🇸 Spanish (Limited Working)</li>
-                    <li>🇳🇱 Dutch (Limited Working)</li>
-                    <li>🇨🇳 Chinese (Elementary)</li>
-                </ul>
+            <h2>Languages</h2>
+            <div class="language-skill">
+                <span>🇮🇹 Italian (Native or Bilingual):</span>
+                <div>[<span class="language-level active"></span><span class="language-level active"></span><span class="language-level active"></span><span class="language-level active"></span><span class="language-level active"></span>]</div>
+            </div>
+            <div class="language-skill">
+                <span>🇬🇧 English (Full Professional):</span>
+                <div>[<span class="language-level active"></span><span class="language-level active"></span><span class="language-level active"></span><span class="language-level active"></span><span class="language-level"></span>]</div>
+            </div>
+            <div class="language-skill">
+                <span>🇫🇷 French (Professional Working):</span>
+                <div>[<span class="language-level active"></span><span class="language-level active"></span><span class="language-level active"></span><span class="language-level"></span><span class="language-level"></span>]</div>
+            </div>
+            <div class="language-skill">
+                <span>🇪🇸 Spanish (Limited Working):</span>
+                <div>[<span class="language-level active"></span><span class="language-level active"></span><span class="language-level"></span><span class="language-level"></span><span class="language-level"></span>]</div>
+            </div>
+            <div class="language-skill">
+                <span>🇳🇱 Dutch (Limited Working):</span>
+                <div>[<span class="language-level active"></span><span class="language-level active"></span><span class="language-level"></span><span class="language-level"></span><span class="language-level"></span>]</div>
+            </div>
+            <div class="language-skill">
+                <span>🇨🇳 Chinese (Elementary):</span>
+                <div>[<span class="language-level active"></span><span class="language-level"></span><span class="language-level"></span><span class="language-level"></span><span class="language-level"></span>]</div>
+            </div>
             </p>
+            <h2>Skills</h2>
                 <ul>
                     <li>🗣️ Communication</li>
                     <li>👥 Management</li>
