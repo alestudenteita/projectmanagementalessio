@@ -14,18 +14,20 @@
             padding: 0;
             display: flex;
         }
-        .container {
-            flex-grow: 1; /* Takes up the remaining space */
-            padding: 20px;
-            overflow: auto;
-        }
         .sidebar {
             width: 20%;
             position: fixed;
             height: 100vh;
             overflow: auto;
             padding: 20px;
-            background-color: #f4f4f4;
+            background-color: #0056b3; /* Blue background */
+            color: #fff; /* White text */
+        }
+        .container {
+            flex-grow: 1; /* Takes up the remaining space */
+            margin-left: 20%; /* Offset by the width of the sidebar */
+            padding: 20px;
+            overflow: auto;
         }
         header, section, footer {
             padding: 20px;
@@ -41,11 +43,11 @@
             margin-right: 10px;
         }
         nav ul li a {
-            color: #0056b3; /* Blue links */
+            color: #fff; /* Adjust link color for visibility on blue background */
             text-decoration: none;
         }
         h1, h2 {
-            color: #0056b3; /* Blue headings */
+            color: #fff; /* Blue headings */
         }
         .images {
             margin: 20px 0;
@@ -58,35 +60,8 @@
 </head>
 <body>
     <div class="sidebar">
-        <section id="education">
-            <h2>Education</h2>
-            <p>Alessio holds dual Master’s degrees in Project Management from Rome Business School and Universidad Internacional de Valencia. He has also earned a Master's degree in Teaching Italian as a Second Language from Università degli Studi Giustino Fortunato and another in Didactic and Promotion of the Italian Language and Culture to Foreigners from Università Ca' Foscari Venezia.</p>
-        </section>
-        <section id="skills">
-            <h2>Languages and Skills</h2>
-            <p>Languages:
-                <ul>
-                    <li>Italian (Native or Bilingual)</li>
-                    <li>English (Full Professional)</li>
-                    <li>French (Professional Working)</li>
-                    <li>Spanish (Limited Working)</li>
-                    <li>Dutch (Limited Working)</li>
-                    <li>Chinese (Elementary)</li>
-                </ul>
-            </p>
-            <p>Skills:
-                <ul>
-                    <li>Communication</li>
-                    <li>Management</li>
-                    <li>Project Management</li>
-                    <li>Strategic Planning</li>
-                </ul>
-            </p>
-            <footer id="contact">
-                <h2>Contact Information</h2>
-                <p>LinkedIn: <a href="https://www.linkedin.com/in/alessioare">View Profile</a></p>
-            </footer>
-        </section>
+        <h2>Contact Information</h2>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/alessioare">View Profile</a></p>
     </div>
     <div class="container">
         <header>
@@ -98,8 +73,16 @@
                     <li><a href="#project-management">Project Management</a></li>
                     <li><a href="#certifications">Certifications</a></li>
                     <li><a href="#methodologies">Methodologies</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
+        </header>
+        <section id="about-me">
+            <h2>About Me</h2>
+            <p>Placeholder text here about Alessio's personal background, interests, and more details that give a personal touch to the website.</p>
+        </section>
             <img src="ale.jpeg" alt="Alessio Are" style="width:200px;height:auto;">
         </header>
         <div class="images">
