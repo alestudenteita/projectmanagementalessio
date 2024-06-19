@@ -52,12 +52,18 @@
             margin-top: 20px;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: all 0.3s ease; /* Smooth transition for hover effects */
         }
         .certification-card h3 {
             color: #0056b3;
         }
         .certification-card p {
             margin: 10px 0;
+        }
+        .certification-card:hover {
+            background-color: #e1f5fe; /* Light blue background on hover */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Increased shadow for a "lifted" effect */
+            border-color: #0056b3; /* Blue border to match the theme */
         }
         .language-level {
             display: inline-block;
