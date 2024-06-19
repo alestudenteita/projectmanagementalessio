@@ -12,19 +12,29 @@
             background-color: #fff;
             margin: 0;
             padding: 0;
+            display: flex;
         }
         .container {
-            max-width: 1200px; /* Adjust this value to fit your desired width */
-            margin: auto;
+            flex-grow: 1; /* Takes up the remaining space */
             padding: 20px;
+            overflow: auto;
+        }
+        .sidebar {
+            width: 20%;
+            position: fixed;
+            height: 100vh;
+            overflow: auto;
+            padding: 20px;
+            background-color: #f4f4f4;
         }
         header, section, footer {
             padding: 20px;
-            text-align: justify; /* Ensures that lines of text are justified */
+            text-align: justify;
         }
         nav ul {
             list-style-type: none;
             padding: 0;
+            text-align: center;
         }
         nav ul li {
             display: inline;
@@ -37,11 +47,48 @@
         h1, h2 {
             color: #0056b3; /* Blue headings */
         }
+        .images {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .images img {
+            margin: 0 10px;
+        }
     </style>
 </head>
 <body>
+    <div class="sidebar">
+        <section id="education">
+            <h2>Education</h2>
+            <p>Alessio holds dual Master’s degrees in Project Management from Rome Business School and Universidad Internacional de Valencia. He has also earned a Master's degree in Teaching Italian as a Second Language from Università degli Studi Giustino Fortunato and another in Didactic and Promotion of the Italian Language and Culture to Foreigners from Università Ca' Foscari Venezia.</p>
+        </section>
+        <section id="skills">
+            <h2>Languages and Skills</h2>
+            <p>Languages:
+                <ul>
+                    <li>Italian (Native or Bilingual)</li>
+                    <li>English (Full Professional)</li>
+                    <li>French (Professional Working)</li>
+                    <li>Spanish (Limited Working)</li>
+                    <li>Dutch (Limited Working)</li>
+                    <li>Chinese (Elementary)</li>
+                </ul>
+            </p>
+            <p>Skills:
+                <ul>
+                    <li>Communication</li>
+                    <li>Management</li>
+                    <li>Project Management</li>
+                    <li>Strategic Planning</li>
+                </ul>
+            </p>
+            <footer id="contact">
+                <h2>Contact Information</h2>
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/alessioare">View Profile</a></p>
+            </footer>
+        </section>
+    </div>
     <div class="container">
-        <!-- Place all your content inside this container -->
         <header>
             <h1>Alessio Are | Project Management Expert</h1>
             <nav>
@@ -51,74 +98,44 @@
                     <li><a href="#project-management">Project Management</a></li>
                     <li><a href="#certifications">Certifications</a></li>
                     <li><a href="#methodologies">Methodologies</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
             <img src="profile_picture.jpg" alt="Alessio Are" style="width:200px;height:auto;">
         </header>
-        <!-- Rest of the sections follow here... -->
-    </header>
+        <div class="images">
+            <img src="placeholder1.jpg" alt="Image Title 1" title="Image Title 1">
+            <img src="placeholder2.jpg" alt="Image Title 2" title="Image Title 2">
+            <img src="placeholder3.jpg" alt="Image Title 3" title="Image Title 3">
+            <img src="placeholder4.jpg" alt="Image Title 4" title="Image Title 4">
+            <img src="placeholder5.jpg" alt="Image Title 5" title="Image Title 5">
+        </div>
         <section id="about">
-        <h2>About Alessio</h2>
-        <p>Alessio Are is a seasoned Project Management professional with a passion for delivering valuable outcomes by strategically connecting initiatives and people. With extensive experience in the project management domain, Alessio has a proven track record of driving successful outcomes across various industries. Fluent in multiple languages and certified in several project management methodologies, Alessio is dedicated to fostering transformative changes and future potentials in global business landscapes.</p>
-    </section>
-    <section id="project-management">
-        <h2>Project Management Experience</h2>
-        <p>Alessio has played key roles in API integration across Europe, connecting companies to major booking platforms such as Bókun, ExperienceBank, and TourCMS. His experience as a Configuration Specialist involves onboarding, maintaining, and optimizing supply in regions such as Benelux, Southern & Central Europe, and the Nordics & Baltics.</p>
-        <p>As a Commercial Manager at Globalinternet, Alessio directed B2B internet access delivery for top-tier clients including Cargill, Nestlé, and Adidas, among others. His project coordination efforts spanned partners like T-mobile, Tele2, and Orange, illustrating his capability to manage complex, multi-stakeholder projects.</p>
-    </section>
-    <section id="certifications">
-        <h2>Certifications</h2>
-        <ul>
-            <li>PRINCE2® 2017 Practitioner: Advanced project management skills specializing in the PRINCE2 methodology.</li>
-            <li>Six Sigma Yellow Belt: Proficient in using Six Sigma techniques to improve business processes and performance.</li>
-            <li>Certified Associate in Project Management (CAPM): Recognized skills in project management, enhancing his ability to manage larger projects.</li>
-            <li>Additional Certifications: Tourism and Travel Management, Market Research, and Consumer Insights.</li>
-        </ul>
-    </section>
-    <section id="methodologies">
-        <h2>Project Management Methodologies</h2>
-        <p>Alessio's extensive training and certification in multiple project management methodologies enable him to employ diverse strategies tailored to project needs, ensuring efficiency and excellence.</p>
-        <ul>
-            <li>PRINCE2® 2017 Practitioner: This methodology is widely recognized for its structured project management approach which divides projects into manageable and controllable stages. It is particularly valued for its flexibility and can be tailored to all types of projects.</li>
-            <li>Certified Associate in Project Management (CAPM): As an entry-level certification offered by PMI, CAPM teaches fundamental project management principles and terminology. It is ideal for those starting a career in project management or those who manage larger projects.</li>
-            <li>Six Sigma Yellow Belt: This certification introduces individuals to the concepts of Six Sigma, including its techniques and tools. The focus is on improving quality and efficiency in operational processes through statistical analysis and quality control measures.</li>
-        </ul>
-    </section>
-    <section id="education">
-        <h2>Education</h2>
-        <p>Alessio holds dual Master’s degrees in Project Management from Rome Business School and Universidad Internacional de Valencia. He has also earned a Master's degree in Teaching Italian as a Second Language from Università degli Studi Giustino Fortunato and another in Didactic and Promotion of the Italian Language and Culture to Foreigners from Università Ca' Foscari Venezia.</p>
-    </section>
-    <section id="skills">
-        <h2>Languages and Skills</h2>
-        <p>Languages:
+            <h2>About Alessio</h2>
+            <p>Alessio Are is a seasoned Project Management professional with a passion for delivering valuable outcomes by strategically connecting initiatives and people. With extensive experience in the project management domain, Alessio has a proven track record of driving successful outcomes across various industries. Fluent in multiple languages and certified in several project management methodologies, Alessio is dedicated to fostering transformative changes and future potentials in global business landscapes.</p>
+        </section>
+        <section id="project-management">
+            <h2>Project Management Experience</h2>
+            <p>Alessio has played key roles in API integration across Europe, connecting companies to major booking platforms such as Bókun, ExperienceBank, and TourCMS. His experience as a Configuration Specialist involves onboarding, maintaining, and optimizing supply in regions such as Benelux, Southern & Central Europe, and the Nordics & Baltics.</p>
+            <p>As a Commercial Manager at Globalinternet, Alessio directed B2B internet access delivery for top-tier clients including Cargill, Nestlé, and Adidas, among others. His project coordination efforts spanned partners like T-mobile, Tele2, and Orange, illustrating his capability to manage complex, multi-stakeholder projects.</p>
+        </section>
+        <section id="certifications">
+            <h2>Certifications</h2>
             <ul>
-                <li>Italian (Native or Bilingual)</li>
-                <li>English (Full Professional)</li>
-                <li>French (Professional Working)</li>
-                <li>Spanish (Limited Working)</li>
-                <li>Dutch (Limited Working)</li>
-                <li>Chinese (Elementary)</li>
+                <li>PRINCE2® 2017 Practitioner: Advanced project management skills specializing in the PRINCE2 methodology.</li>
+                <li>Six Sigma Yellow Belt: Proficient in using Six Sigma techniques to improve business processes and performance.</li>
+                <li>Certified Associate in Project Management (CAPM): Recognized skills in project management, enhancing his ability to manage larger projects.</li>
+                <li>Additional Certifications: Tourism and Travel Management, Market Research, and Consumer Insights.</li>
             </ul>
-        </p>
-        <p>Skills:
+        </section>
+        <section id="methodologies">
+            <h2>Project Management Methodologies</h2>
+            <p>Alessio's extensive training and certification in multiple project management methodologies enable him to employ diverse strategies tailored to project needs, ensuring efficiency and excellence.</p>
             <ul>
-                <li>Communication</li>
-                <li>Management</li>
-                <li>Project Management</li>
-                <li>Strategic Planning</li>
+                <li>PRINCE2® 2017 Practitioner: This methodology is widely recognized for its structured project management approach which divides projects into manageable and controllable stages. It is particularly valued for its flexibility and can be tailored to all types of projects.</li>
+                <li>Certified Associate in Project Management (CAPM): As an entry-level certification offered by PMI, CAPM teaches fundamental project management principles and terminology. It is ideal for those starting a career in project management or those who manage larger projects.</li>
+                <li>Six Sigma Yellow Belt: This certification introduces individuals to the concepts of Six Sigma, including its techniques and tools. The focus is on improving quality and efficiency in operational processes through statistical analysis and quality control measures.</li>
             </ul>
-        </p>
-    </section>
-    <footer id="contact">
-        <h2>Contact Information</h2>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/alessioare">View Profile</a></p>
-    </footer>
+        </section>
+    </div>
 </body>
 </html>
- </div>
-</body>
-</html>
-
