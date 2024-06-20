@@ -11,6 +11,7 @@
             color: #000;
             background-color: #fff;
             margin: 0;
+            overflow: hidden; /* Prevent scrollbars during animation */
         }
         .container {
             max-width: 1200px;
@@ -29,6 +30,7 @@
         nav ul li {
             display: inline;
             margin-right: 10px;
+            opacity: 0; /* Initially hidden */
         }
         nav ul li a {
             color: #0056b3;
@@ -202,6 +204,26 @@
         .education-card img:hover {
             transform: scale(1.2);
         }
+        #centered-sentence {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 24px;
+            opacity: 0; /* Initially hidden */
+            text-align: center;
+        }
+        #additional-sentence {
+            color: #0056b3;
+            text-align: center;
+            font-size: 20px;
+            opacity: 0; /* Initially hidden */
+            margin-top: 20px;
+            transition: color 0.3s;
+        }
+        #additional-sentence:hover {
+            color: orange;
+        }
     </style>
 </head>
 <body>
@@ -210,15 +232,15 @@
             <h1>Alessio A. | Project Management Expert</h1>
             <nav>
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#project-management">Project Management</a></li>
-                    <li><a href="#certifications">Certifications</a></li>
-                    <li><a href="#methodologies">Methodologies</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#languages">Languages</a></li>
-                    <li><a href="#references">References</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li class="nav-item"><a href="#home">Home</a></li>
+                    <li class="nav-item"><a href="#about">About</a></li>
+                    <li class="nav-item"><a href="#project-management">Project Management</a></li>
+                    <li class="nav-item"><a href="#certifications">Certifications</a></li>
+                    <li class="nav-item"><a href="#methodologies">Methodologies</a></li>
+                    <li class="nav-item"><a href="#education">Education</a></li>
+                    <li class="nav-item"><a href="#languages">Languages</a></li>
+                    <li class="nav-item"><a href="#references">References</a></li>
+                    <li class="nav-item"><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </header>
@@ -491,9 +513,14 @@
             <p><a href="https://www.linkedin.com/in/alessioare"><img src="linkedin-logo.png" alt="LinkedIn Alessio A." style="width: 20px; height: 20px;">  View Profile</a></p>
         </footer>
     </div>
+    <div id="centered-sentence">Every piece of the puzzle matters in a project</div>
+    <div id="additional-sentence">Your Success is Our Commitment</div>
     <script>
         const carousel = document.querySelector('.carousel');
         const cards = document.querySelectorAll('.reference-card');
+        const navItems = document.querySelectorAll('.nav-item');
+        const centeredSentence = document.getElementById('centered-sentence');
+        const additionalSentence = document.getElementById('additional-sentence');
         let currentIndex = 0;
 
         function scrollLeft() {
@@ -518,6 +545,34 @@
             const offset = -currentIndex * (cards[0].offsetWidth + 20); // 20 is the margin
             carousel.style.transform = `translateX(${offset}px)`;
         }
+
+        function animateNavItems() {
+            navItems.forEach((item, index) => {
+                const delay = Math.random() * 3 + 3; // Random delay between 3-6 seconds
+                setTimeout(() => {
+                    item.style.opacity = 1;
+                    item.style.transform = 'translateY(0)';
+                }, delay * 1000);
+            });
+        }
+
+        function showCenteredSentence() {
+            setTimeout(() => {
+                centeredSentence.style.opacity = 1;
+            }, 7000); // Show after the navigation animation
+        }
+
+        function showAdditionalSentence() {
+            setTimeout(() => {
+                additionalSentence.style.opacity = 1;
+            }, 8000); // Show after the centered sentence
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            animateNavItems();
+            showCenteredSentence();
+            showAdditionalSentence();
+        });
     </script>
 </body>
 </html>
