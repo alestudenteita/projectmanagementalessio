@@ -304,12 +304,12 @@
     </div>
 </section>
         <section id="references">
-            <h2>References</h2>
-            <div class="carousel-container">
-                <button class="carousel-button left" onclick="scrollLeft()">&#9664;</button>
-                <div class="carousel">
-                    <div class="reference-card">
-                        <h3>K.B.</h3>
+    <h2>References</h2>
+    <div class="carousel-container">
+        <button class="carousel-button left" onclick="scrollLeft()">&#9664;</button>
+        <div class="carousel">
+            <div class="reference-card">
+                <h3>K.B.</h3>
                         <p>Alessio is a highly positive, enthusiastic and energetic person. In his time at Globalinternet he demonstrated to be a valueable team player who was able getting things done. He showed to be a keen learner and always willing to pick up new things. This how he got involved in a project to implement API’s with our providers. His fluency in various languages, attention to detail and good communication skills contributed largely to the success of the project. It was a pleasure working with Alessio.</p>
                     </div>
                     <div class="reference-card">
@@ -320,18 +320,18 @@
                         <h3>N.E.</h3>
                         <p>I worked with Alessio at Globalinternet. Alessio was a pleasure to work with, always showing a positive attitude and enthusiasm. He is reliable and trustworthy, with a strong drive to deliver. Alessio was part of the pricing and delivery team who provided services to my customers, answering commercial proposals for internet solutions. Alessio would liaise with providers to get feasibility and pricing information at pre-sales stage. I appreciated his attention to details, especially when dealing with complex customer requirements. He was also in charge of managing the delivery of internet services ordered by customers. In various occasions, we worked together on difficult deliveries. Having a strong customer focus, Alessio was key to understand the issues and seek solutions with our suppliers to exceed customer expectations. I highly recommend Alessio for any business opportunity. His language skills are a valuable benefit, making him a strong asset for international companies.  I wish Alessio all the best !</p>
                     </div>
-                    <div class="reference-card">
-                        <h3>Susan Williams</h3>
-                        <p>Alessio’s expertise in project management is outstanding. He is a great team player.</p>
-                    </div>
-                    <div class="reference-card">
-                        <h3>Tom Brown</h3>
-                        <p>Alessio’s strategic approach to project management is impressive and effective.</p>
-                    </div>
-                    <!-- Add more references as needed -->
-                </div>
-                <button class="carousel-button right" onclick="scrollRight()">&#9654;</button>
+            <div class="reference-card">
+                <h3>Susan Williams</h3>
+                <p>Alessio’s expertise in project management is outstanding. He is a great team player who is always willing to go the extra mile to ensure the success of the project. His leadership skills and dedication are commendable.</p>
             </div>
+            <div class="reference-card">
+                <h3>Tom Brown</h3>
+                <p>Alessio’s strategic approach to project management is impressive and effective. He consistently delivers high-quality results and is an excellent communicator. His ability to lead and motivate the team is truly exceptional.</p>
+            </div>
+            <!-- Add more references as needed -->
+        </div>
+        <button class="carousel-button right" onclick="scrollRight()">&#9654;</button>
+    </div>
         </section>
         <footer id="contact" class="footer">
             <h2>Contact Information</h2>
@@ -347,33 +347,34 @@
                 bar.style.strokeDashoffset = value;
             });
         });
+    const carousel = document.querySelector('.carousel');
+    const cards = document.querySelectorAll('.reference-card');
+    let currentIndex = 0;
 
-        const carousel = document.querySelector('.carousel');
-        const cards = document.querySelectorAll('.reference-card');
-        let currentIndex = 0;
-
-        function scrollLeft() {
-            if (currentIndex === 0) {
-                currentIndex = cards.length - 1;
-            } else {
-                currentIndex--;
-            }
-            updateCarousel();
+    function scrollLeft() {
+        if (currentIndex === 0) {
+            currentIndex = cards.length - 1;
+        } else {
+            currentIndex--;
         }
+        updateCarousel();
+    }
 
-        function scrollRight() {
-            if (currentIndex === cards.length - 1) {
-                currentIndex = 0;
-            } else {
-                currentIndex++;
-            }
-            updateCarousel();
+    function scrollRight() {
+        if (currentIndex === cards.length - 1) {
+            currentIndex = 0;
+        } else {
+            currentIndex++;
         }
+        updateCarousel();
+    }
 
-        function updateCarousel() {
-            const offset = -currentIndex * (cards[0].offsetWidth + 20); // 20 is the margin
-            carousel.style.transform = `translateX(${offset}px)`;
-        }
+    function updateCarousel() {
+        const offset = -currentIndex * (cards[0].offsetWidth + 20); // 20 is the margin
+        carousel.style.transform = `translateX(${offset}px)`;
+    }
+</script>
+
     </script>
 </body>
 </html>
