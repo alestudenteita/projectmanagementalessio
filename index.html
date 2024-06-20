@@ -36,6 +36,24 @@
         }
         h1, h2 {
             color: #0056b3;
+            position: relative;
+        }
+        h1::after, h2::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            display: block;
+            margin-top: 5px;
+            right: 0;
+            background: #0056b3;
+            transition: width 0.4s ease;
+            -webkit-transition: width 0.4s ease;
+        }
+        h1:hover::after, h2:hover::after {
+            width: 100%;
+            left: 0;
+            background: #0056b3;
         }
         .images {
             margin: 20px 0;
@@ -58,18 +76,22 @@
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
             border-color: #0056b3;
         }
-          .badge-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        padding: 20px;
-    }
-    .badge {
-        width: 100px;
-        height: auto;
-        margin: 5px;
-        display: inline-block;
+        .badge-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+        .badge {
+            width: 100px;
+            height: auto;
+            margin: 5px;
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+        .badge:hover {
+            transform: scale(1.2);
         }
         .footer {
             text-align: center;
@@ -167,6 +189,12 @@
         .carousel-button.right {
             right: 0;
         }
+        .education-card img {
+            width: 50px;
+            height: auto;
+            display: block;
+            margin: 0 auto 10px;
+        }
     </style>
 </head>
 <body>
@@ -200,8 +228,14 @@
         </section>
         <section id="project-management">
             <h2>Project Management Experience</h2>
-            <p>Alessio has played key roles in API integration across the world, connecting Tiqets to major booking platforms such as Bókun, ExperienceBank, and TourCMS. His experience as a Configuration Specialist at Tiqets involves onboarding, maintaining, and optimizing supply in regions such as Benelux, Southern & Central Europe, and the Nordics & Baltics. Additionally, Alessio has extensive project management and commercial experience working at Globalinternet. During this time, he was responsible for procuring and directing B2B internet access delivery in France & Benelux for customers like Cargill, Nestlé, Mars, Adidas, BASF, Mango, Inditex, Unilever, and Telefónica among others. Alessio's role involved coordinating the API integration in Europe with partners like T-mobile, Tele2, KPN, Ziggo, Orange, Free, SFR, Masmovil, Vodafone, British Telecom, Virgin, TalkTalk, and Colt among others. This experience showcases his ability to manage complex integrations and deliver high-quality solutions for major clients in various regions.
-            </p>
+            <div class="experience-section">
+                <h3>Tiqets</h3>
+                <p>Alessio has played key roles in API integration across the world, connecting Tiqets to major booking platforms such as Bókun, ExperienceBank, and TourCMS. His experience as a Configuration Specialist at Tiqets involves onboarding, maintaining, and optimizing supply in regions such as Benelux, Southern & Central Europe, and the Nordics & Baltics.</p>
+            </div>
+            <div class="experience-section">
+                <h3>Global Internet</h3>
+                <p>Additionally, Alessio has extensive project management and commercial experience working at Global Internet. During this time, he was responsible for procuring and directing B2B internet access delivery in France & Benelux for customers like Cargill, Nestlé, Mars, Adidas, BASF, Mango, Inditex, Unilever, and Telefónica among others. Alessio's role involved coordinating the API integration in Europe with partners like T-mobile, Tele2, KPN, Ziggo, Orange, Free, SFR, Masmovil, Vodafone, British Telecom, Virgin, TalkTalk, and Colt among others. This experience showcases his ability to manage complex integrations and deliver high-quality solutions for major clients in various regions.</p>
+            </div>
         </section>
         <section id="certifications">
             <h2>Certifications 🏆</h2>
@@ -234,44 +268,48 @@
         <section id="education">
             <h2>Education 🎓</h2>
             <div class="education-card">
+                <img src="education1.png" alt="Education Logo">
                 <h3>Rome Business School - Master in Project Management</h3>
                 <p>At Rome Business School, the Master's program in Project Management prepares students with essential managerial skills and specialized project management techniques. Here are the key modules:</p>
                 <ul>
-                    <p><strong>Managerial Core:</strong> Covers topics like managerial economics, business strategy, accounting, and budgeting, essential for foundational business planning and financial management.<p>
-                    <p><strong>Project Management Specialization:</strong> Includes comprehensive training in project and operations management, business analysis, project planning, execution, monitoring, and control. Emphasis on project management software and agile methodologies like Kanban and SCRUM.<p>
-                    <p><strong>Leadership and Ethical Practices:</strong> Focuses on international and ethical aspects of project management, including corporate social responsibility and professional conduct.<p>
-                    <p><strong>Interpersonal Skills:</strong> Training in leadership, motivation, conflict management, and effective communication to enhance team and individual performance.<p>
-                    <p><strong>Electives and Capstone Project:</strong> Electives in innovation, digitalization, and industry business excellence, culminating in a capstone project where students solve real-world business challenges.<p>
+                    <li><strong>Managerial Core:</strong> Covers topics like managerial economics, business strategy, accounting, and budgeting, essential for foundational business planning and financial management.</li>
+                    <li><strong>Project Management Specialization:</strong> Includes comprehensive training in project and operations management, business analysis, project planning, execution, monitoring, and control. Emphasis on project management software and agile methodologies like Kanban and SCRUM.</li>
+                    <li><strong>Leadership and Ethical Practices:</strong> Focuses on international and ethical aspects of project management, including corporate social responsibility and professional conduct.</li>
+                    <li><strong>Interpersonal Skills:</strong> Training in leadership, motivation, conflict management, and effective communication to enhance team and individual performance.</li>
+                    <li><strong>Electives and Capstone Project:</strong> Electives in innovation, digitalization, and industry business excellence, culminating in a capstone project where students solve real-world business challenges.</li>
                 </ul>
             </div>
             <div class="education-card">
+                <img src="education2.png" alt="Education Logo">
                 <h3>Universidad Internacional de Valencia (VIU) - Master in Project Management</h3>
                 <p>The Master’s program at VIU is tailored to manage projects in a dynamic, globalized business environment:</p>
                 <ul>
-                    <p><strong>Project Lifecycle Management:</strong> Detailed study of project initiation, planning, execution, monitoring, and closing phases.<p>
-                    <p><strong>Advanced Project Management Techniques:</strong> Emphasis on risk management, resource allocation, and quality assurance.<p>
-                    <p><strong>Global Business Environment:</strong> Understanding the integration of international standards and practices in project management.<p>
-                    <p><strong>Professional Development:</strong> Preparation for PMI certifications, including PMP and CAPM, critical for advancing in project management.<p>
+                    <li><strong>Project Lifecycle Management:</strong> Detailed study of project initiation, planning, execution, monitoring, and closing phases.</li>
+                    <li><strong>Advanced Project Management Techniques:</strong> Emphasis on risk management, resource allocation, and quality assurance.</li>
+                    <li><strong>Global Business Environment:</strong> Understanding the integration of international standards and practices in project management.</li>
+                    <li><strong>Professional Development:</strong> Preparation for PMI certifications, including PMP and CAPM, critical for advancing in project management.</li>
                 </ul>
             </div>
             <div class="education-card">
+                <img src="education3.png" alt="Education Logo">
                 <h3>Università della Valle d'Aosta - Bachelor's Degree in Languages and Communication for Tourism and Business</h3>
                 <p>This program integrates language proficiency with communication skills tailored for the tourism and business sectors. Key courses include:</p>
                 <ul>
-                    <p><strong>Intercultural Communication:</strong> Strategies for effective communication across different cultures.<p>
-                    <p><strong>Tourism Marketing:</strong> Techniques for promoting tourism destinations and services.<p>
-                    <p><strong>Business Negotiation:</strong> Skills for negotiating in a competitive business environment.<p>
-                    <p><strong>Event Management:</strong> Planning and managing large-scale events within the tourism industry.<p>
+                    <li><strong>Intercultural Communication:</strong> Strategies for effective communication across different cultures.</li>
+                    <li><strong>Tourism Marketing:</strong> Techniques for promoting tourism destinations and services.</li>
+                    <li><strong>Business Negotiation:</strong> Skills for negotiating in a competitive business environment.</li>
+                    <li><strong>Event Management:</strong> Planning and managing large-scale events within the tourism industry.</li>
                 </ul>
             </div>
             <div class="education-card">
+                <img src="education4.png" alt="Education Logo">
                 <h3>Université Savoie Mont Blanc - Bachelor's Degree in Foreign Languages Applied (LEA) to Tourism, Business, and Communication</h3>
                 <p>This degree emphasizes practical language skills applied in professional settings. Core courses include:</p>
                 <ul>
-                    <p><strong>Applied Language Studies:</strong> Advanced studies in language use in professional contexts.<p>
-                    <p><strong>Corporate Communication:</strong> Techniques for effective corporate messaging and branding.<p>
-                    <p><strong>International Business Strategies:</strong> Understanding global business dynamics and market entry strategies.<p>
-                    <p><strong>Translation and Interpretation:</strong> Skills in translating and interpreting across languages in real-time business and tourism contexts.<p>
+                    <li><strong>Applied Language Studies:</strong> Advanced studies in language use in professional contexts.</li>
+                    <li><strong>Corporate Communication:</strong> Techniques for effective corporate messaging and branding.</li>
+                    <li><strong>International Business Strategies:</strong> Understanding global business dynamics and market entry strategies.</li>
+                    <li><strong>Translation and Interpretation:</strong> Skills in translating and interpreting across languages in real-time business and tourism contexts.</li>
                 </ul>
             </div>
         </section>
@@ -316,11 +354,11 @@
                 </div>
             </div>
         </section>
-      <section id="references">
-    <h2>References</h2>
-    <div class="carousel-container">
-        <button class="carousel-button left" onclick="scrollLeft()">&#9664;</button>
-        <div class="carousel">
+        <section id="references">
+            <h2>References</h2>
+            <div class="carousel-container">
+                <button class="carousel-button left" onclick="scrollLeft()">&#9664;</button>
+                    <div class="carousel">
             <div class="reference-card">
                 <h3>K.B.</h3>
                 <p>Alessio is a highly positive, enthusiastic and energetic person. In his time at Globalinternet he demonstrated to be a valueable team player who was able getting things done. He showed to be a keen learner and always willing to pick up new things. This how he got involved in a project to implement API’s with our providers. His fluency in various languages, attention to detail and good communication skills contributed largely to the success of the project. It was a pleasure working with Alessio.</p>
