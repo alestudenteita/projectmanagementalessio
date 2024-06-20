@@ -62,43 +62,20 @@
             margin: 20px auto;
             width: 50%;
         }
-        .progress-bar {
-            background-color: #f0f0f0;
-            border-radius: 13px;
-            overflow: hidden;
-            width: 100%;
-            position: relative;
+        .language-skill span {
+            display: inline-block;
+            margin-bottom: 5px;
         }
-        .progress-bar-inner {
+        .language-level {
+            display: inline-block;
+            width: 20px;
             height: 20px;
-            background: linear-gradient(to right, #007BFF, #4fc3f7);
-            text-align: center;
-            line-height: 20px;
-            color: white;
-            border-radius: 12px;
-            position: absolute;
-            left: 0;
-            width: 0;
-            transition: width 1s ease-in-out;
+            background-color: #ddd;
+            margin-right: 2px;
+            border-radius: 50%;
         }
-        .tooltip {
-            visibility: hidden;
-            background-color: black;
-            color: white;
-            text-align: center;
-            border-radius: 6px;
-            padding: 5px;
-            position: absolute;
-            z-index: 1;
-            top: -35px;
-            right: 50%;
-            transform: translateX(50%);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        .language-skill:hover .tooltip {
-            visibility: visible;
-            opacity: 1;
+        .language-level.active {
+            background-color: #007BFF;
         }
         .badge-container {
             text-align: center;
@@ -131,7 +108,7 @@
                     <li><a href="#certifications">Certifications</a></li>
                     <li><a href="#methodologies">Methodologies</a></li>
                     <li><a href="#education">Education</a></li>
-                    <li><a href="#languages">Languages</a></li>
+                    <li><a href="#skills">Languages and Skills</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -151,10 +128,10 @@
             <h2>Project Management Experience</h2>
             <p>Alessio has played key roles in API integration across the world, connecting Tiqets to major booking platforms such as Bókun, ExperienceBank, and TourCMS. His experience as a Configuration Specialist at Tiqets involves onboarding, maintaining, and optimizing supply in regions such as Benelux, Southern & Central Europe, and the Nordics & Baltics. Additionally, Alessio has extensive project management and commercial experience working at Globalinternet. During this time, he was responsible for procuring and directing B2B internet access delivery in France & Benelux for customers like Cargill, Nestlé, Mars, Adidas, BASF, Mango, Inditex, Unilever, and Telefónica among others. Alessio's role involved coordinating the API integration in Europe with partners like T-mobile, Tele2, KPN, Ziggo, Orange, Free, SFR, Masmovil, Vodafone, British Telecom, Virgin, TalkTalk, and Colt among others. This experience showcases his ability to manage complex integrations and deliver high-quality solutions for major clients in various regions.
             </p>
-           </section>
-         <section id="certifications">
+        </section>
+        <section id="certifications">
             <h2>Certifications 🏆</h2>
-                <div class="badge-container">
+            <div class="badge-container">
                 <img src="badge1.png" alt="Certification Emotional Intelligence" class="badge">
                 <img src="badge2.png" alt="Certification CAPM" class="badge">
                 <img src="badge3.png" alt="Certification Prince 2" class="badge">
@@ -177,8 +154,8 @@
             </div>
             <div class="certification-card">
                 <h3>🌍 Additional Certifications</h3>
-                <p>Specialized knowledge in Soft Skills, Emotional Intelligence, Tourism and Travel Management, Market Research, ISO 56002 Innovation Management, Deisgn Thinking, Growth Marketing, Digital Marketing, and Consumer Insights, highlights Alessio's ability to understand and manage diverse aspects of business, enhancing his versatility and expertise in multiple domains.</p>
-                 </div>
+                <p>Specialized knowledge in Soft Skills, Emotional Intelligence, Tourism and Travel Management, Market Research, ISO 56002 Innovation Management, Design Thinking, Growth Marketing, Digital Marketing, and Consumer Insights, highlights Alessio's ability to understand and manage diverse aspects of business, enhancing his versatility and expertise in multiple domains.</p>
+            </div>
         </section>
         <section id="education">
             <h2>Education 🎓</h2>
@@ -203,7 +180,7 @@
                     <li><strong>Professional Development:</strong> Preparation for PMI certifications, including PMP and CAPM, critical for advancing in project management.</li>
                 </ul>
             </div>
-           <div class="education-card">
+            <div class="education-card">
                 <h3>Università della Valle d'Aosta - Bachelor's Degree in Languages and Communication for Tourism and Business</h3>
                 <p>This program integrates language proficiency with communication skills tailored for the tourism and business sectors. Key courses include:</p>
                 <ul>
@@ -224,49 +201,31 @@
                 </ul>
             </div>
         </section>
-        <section id="languages">
-            <h2>Languages</h2>
+        <section id="skills">
+            <h2>Languages and Skills</h2>
             <div class="language-skill">
-                <span>🇮🇹 Italian (Native or Bilingual)</span>
-                <div class="progress-bar">
-                    <div class="progress-bar-inner" style="width: 100%;">5/5</div>
-                    <span class="tooltip">Native Proficiency</span>
-                </div>
+                <span>🇮🇹 Italian (Native or Bilingual):</span>
+                <div>[<span class="language-level active"></span><span class="language-level active"></span><span class="language-level active"></span><span class="language-level active"></span><span class="language-level active"></span>]</div>
             </div>
             <div class="language-skill">
-                <span>🇬🇧 English (Full Professional)</span>
-                <div class="progress-bar">
-                    <div class="progress-bar-inner" style="width: 80%;">4/5</div>
-                    <span class="tooltip">Full Professional Proficiency</span>
-                </div>
+                <span>🇬🇧 English (Full Professional):</span>
+                <div>[<span class="language-level active"></span><span class="language-level active"></span><span class="language-level active"></span><span class="language-level active"></span><span class="language-level"></span>]</div>
             </div>
             <div class="language-skill">
-                <span>🇫🇷 French (Professional Working)</span>
-                <div class="progress-bar">
-                    <div class="progress-bar-inner" style="width: 60%;">3/5</div>
-                    <span class="tooltip">Professional Working Proficiency</span>
-                </div>
+                <span>🇫🇷 French (Professional Working):</span>
+                <div>[<span class="language-level active"></span><span class="language-level active"></span><span class="language-level active"></span><span class="language-level"></span><span class="language-level"></span>]</div>
             </div>
             <div class="language-skill">
-                <span>🇪🇸 Spanish (Limited Working)</span>
-                <div class="progress-bar">
-                    <div class="progress-bar-inner" style="width: 40%;">2/5</div>
-                    <span class="tooltip">Limited Working Proficiency</span>
-                </div>
+                <span>🇪🇸 Spanish (Limited Working):</span>
+                <div>[<span class="language-level active"></span><span class="language-level active"></span><span class="language-level"></span><span class="language-level"></span><span class="language-level"></span>]</div>
             </div>
             <div class="language-skill">
-                <span>🇳🇱 Dutch (Limited Working)</span>
-                <div class="progress-bar">
-                    <div class="progress-bar-inner" style="width: 40%;">2/5</div>
-                    <span class="tooltip">Limited Working Proficiency</span>
-                </div>
+                <span>🇳🇱 Dutch (Limited Working):</span>
+                <div>[<span class="language-level active"></span><span class="language-level active"></span><span class="language-level"></span><span class="language-level"></span><span class="language-level"></span>]</div>
             </div>
             <div class="language-skill">
-                <span>🇨🇳 Chinese (Elementary)</span>
-                <div class="progress-bar">
-                    <div class="progress-bar-inner" style="width: 20%;">1/5</div>
-                    <span class="tooltip">Elementary Proficiency</span>
-                </div>
+                <span>🇨🇳 Chinese (Elementary):</span>
+                <div>[<span class="language-level active"></span><span class="language-level"></span><span class="language-level"></span><span class="language-level"></span><span class="language-level"></span>]</div>
             </div>
         </section>
         <footer id="contact" class="footer">
@@ -275,17 +234,5 @@
             <p><a href="https://www.linkedin.com/in/alessioare"><img src="linkedin-logo.png" alt="LinkedIn Alessio Are" style="width: 20px; height: 20px;">  View Profile</a></p>
         </footer>
     </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const progressBars = document.querySelectorAll('.progress-bar-inner');
-            progressBars.forEach(bar => {
-                let width = bar.style.width;
-                bar.style.width = '0';
-                setTimeout(() => {
-                    bar.style.width = width;
-                }, 500);
-            });
-        });
-    </script>
 </body>
 </html>
