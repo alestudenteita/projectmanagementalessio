@@ -63,40 +63,45 @@
             width: 50%;
         }
         .progress-bar {
-    background-color: #f0f0f0;
-    border-radius: 13px;
-    overflow: hidden;
-    width: 100%; /* Ensures the progress bar fills the width of its container */
-    position: relative; /* Establishes a positioning context for absolute positioning inside */
+            background-color: #f0f0f0;
+            border-radius: 13px;
+            overflow: hidden;
+            width: 100%;
+            position: relative;
         }
         .progress-bar-inner {
-    height: 20px;
-    background: linear-gradient(to right, #007BFF, #4fc3f7); /* Gradient from blue to lighter blue */
-    text-align: center; /* Aligns text to the center of the element */
-    line-height: 20px; /* Centers text vertically */
-    color: white;
-    border-radius: 12px;
-    position: absolute; /* Allows precise control over the position */
-    left: 0; /* Starts from the left edge */
-    right: 0; /* Stretches to the right edge */
-    display: flex; /* Enables flexbox properties */
-    justify-content: center; /* Centers content horizontally in a flex container */
-    align-items: center; /* Centers content vertically in a flex container */
+            height: 20px;
+            background: linear-gradient(to right, #007BFF, #4fc3f7);
+            text-align: center;
+            line-height: 20px;
+            color: white;
+            border-radius: 12px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: width 1s ease-in-out;
         }
         .tooltip {
-    visibility: hidden;
-    background-color: black;
-    color: white;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px;
-    position: absolute;
-    z-index: 1;
-    top: -5px;
-    right: 105%;
+            visibility: hidden;
+            background-color: black;
+            color: white;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            top: -35px;
+            right: 50%;
+            transform: translateX(50%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
         .language-skill:hover .tooltip {
-    visibility: visible;
+            visibility: visible;
+            opacity: 1;
         }
         .badge-container {
             text-align: center;
@@ -223,55 +228,68 @@
             </div>
         </section>
         <section id="languages">
-    <h2>Languages</h2>
-    <div class="language-skill">
-        <span>🇮🇹 Italian (Native or Bilingual)</span>
-        <div class="progress-bar">
-            <div class="progress-bar-inner" style="width: 100%;">5/5</div>
-            <span class="tooltip">Native Proficiency</span>
-        </div>
-    </div>
-    <div class="language-skill">
-        <span>🇬🇧 English (Full Professional)</span>
-        <div class="progress-bar">
-            <div class="progress-bar-inner" style="width: 80%;">4/5</div>
-            <span class="tooltip">Full Professional Proficiency</span>
-        </div>
-    </div>
-    <div class="language-skill">
-        <span>🇫🇷 French (Professional Working)</span>
-        <div class="progress-bar">
-            <div class="progress-bar-inner" style="width: 60%;">3/5</div>
-            <span class="tooltip">Professional Working Proficiency</span>
-        </div>
-    </div>
-    <div class="language-skill">
-        <span>🇪🇸 Spanish (Limited Working)</span>
-        <div class="progress-bar">
-            <div class="progress-bar-inner" style="width: 40%;">2/5</div>
-            <span class="tooltip">Limited Working Proficiency</span>
-        </div>
-    </div>
-    <div class="language-skill">
-        <span>🇳🇱 Dutch (Limited Working)</span>
-        <div class="progress-bar">
-            <div class="progress-bar-inner" style="width: 40%;">2/5</div>
-            <span class="tooltip">Limited Working Proficiency</span>
-        </div>
-    </div>
-    <div class="language-skill">
-        <span>🇨🇳 Chinese (Elementary)</span>
-        <div class="progress-bar">
-            <div class="progress-bar-inner" style="width: 20%;">1/5</div>
-            <span class="tooltip">Elementary Proficiency</span>
-        </div>
-    </div>
+            <h2>Languages</h2>
+            <div class="language-skill">
+                <span>🇮🇹 Italian (Native or Bilingual)</span>
+                <div class="progress-bar">
+                    <div class="progress-bar-inner" style="width: 100%;">5/5</div>
+                    <span class="tooltip">Native Proficiency</span>
+                </div>
+            </div>
+            <div class="language-skill">
+                <span>🇬🇧 English (Full Professional)</span>
+                <div class="progress-bar">
+                    <div class="progress-bar-inner" style="width: 80%;">4/5</div>
+                    <span class="tooltip">Full Professional Proficiency</span>
+                </div>
+            </div>
+            <div class="language-skill">
+                <span>🇫🇷 French (Professional Working)</span>
+                <div class="progress-bar">
+                    <div class="progress-bar-inner" style="width: 60%;">3/5</div>
+                    <span class="tooltip">Professional Working Proficiency</span>
+                </div>
+            </div>
+            <div class="language-skill">
+                <span>🇪🇸 Spanish (Limited Working)</span>
+                <div class="progress-bar">
+                    <div class="progress-bar-inner" style="width: 40%;">2/5</div>
+                    <span class="tooltip">Limited Working Proficiency</span>
+                </div>
+            </div>
+            <div class="language-skill">
+                <span>🇳🇱 Dutch (Limited Working)</span>
+                <div class="progress-bar">
+                    <div class="progress-bar-inner" style="width: 40%;">2/5</div>
+                    <span class="tooltip">Limited Working Proficiency</span>
+                </div>
+            </div>
+            <div class="language-skill">
+                <span>🇨🇳 Chinese (Elementary)</span>
+                <div class="progress-bar">
+                    <div class="progress-bar-inner" style="width: 20%;">1/5</div>
+                    <span class="tooltip">Elementary Proficiency</span>
+                </div>
+            </div>
         </section>
         <footer id="contact" class="footer">
             <h2>Contact Information</h2>
             <p>Randstad, The Netherlands</p>
             <p><a href="https://www.linkedin.com/in/alessioare"><img src="linkedin-logo.png" alt="LinkedIn Alessio Are" style="width: 20px; height: 20px;">  View Profile</a></p>
         </footer>
-         </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const progressBars = document.querySelectorAll('.progress-bar-inner');
+            progressBars.forEach(bar => {
+                let width = bar.style.width;
+                bar.style.width = '0';
+                setTimeout(() => {
+                    bar.style.width = width;
+                }, 500);
+            });
+        });
+    </script>
 </body>
 </html>
+
