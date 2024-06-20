@@ -11,7 +11,6 @@
             color: #000;
             background-color: #fff;
             margin: 0;
-            padding: 0;
         }
         .container {
             max-width: 1200px;
@@ -45,7 +44,7 @@
         .images img {
             margin: 0 10px;
         }
-        .certification-card, .education-card, .language-skill, .footer, .badge-container {
+        .certification-card, .education-card, .language-skill, .footer {
             background-color: #f9f9f9;
             border: 1px solid #ddd;
             padding: 10px;
@@ -54,7 +53,7 @@
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             transition: all 0.3s ease;
         }
-        .certification-card:hover, .education-card:hover, .badge-container:hover {
+        .certification-card:hover, .education-card:hover {
             background-color: #e1f5fe;
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
             border-color: #0056b3;
@@ -79,20 +78,15 @@
             color: white;
             border-radius: 12px;
         }
-        .tooltip {
-            visibility: hidden;
-            background-color: black;
-            color: white;
+        .badge-container {
             text-align: center;
-            border-radius: 6px;
-            padding: 5px;
-            position: absolute;
-            z-index: 1;
-            top: -5px;
-            right: 105%;
+            padding: 20px;
         }
-        .language-skill:hover .tooltip, .skills-list:hover .tooltip {
-            visibility: visible;
+        .badge {
+            width: 100px;
+            height: auto;
+            margin: 5px;
+            display: inline-block;
         }
         .footer {
             text-align: center;
@@ -100,12 +94,6 @@
         }
         .footer img {
             vertical-align: middle;
-        }
-        .badge {
-            width: 100px; /* Adjust size as necessary */
-            height: auto;
-            margin: 5px;
-            display: inline-block; /* Align badges side by side */
         }
     </style>
 </head>
@@ -143,7 +131,7 @@
         </section>
          <section id="certifications">
             <h2>Certifications 🏆</h2>
-                <div class="certification-card">
+                <div class="badge-container">
                 <img src="badge1.png" alt="Certification Emotional Intelligence" class="badge">
                 <img src="badge2.png" alt="Certification CAPM" class="badge">
                 <img src="badge3.png" alt="Certification Prince 2" class="badge">
