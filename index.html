@@ -11,7 +11,6 @@
             color: #000;
             background-color: #fff;
             margin: 0;
-            overflow: hidden; /* Prevent scrollbars during animation */
         }
         .container {
             max-width: 1200px;
@@ -26,11 +25,14 @@
             list-style-type: none;
             padding: 0;
             text-align: center;
+            position: relative;
+            opacity: 0;
+            transform: translateY(-30px);
+            transition: opacity 1s, transform 1s;
         }
         nav ul li {
             display: inline;
             margin-right: 10px;
-            opacity: 0; /* Initially hidden */
         }
         nav ul li a {
             color: #0056b3;
@@ -203,26 +205,6 @@
         }
         .education-card img:hover {
             transform: scale(1.2);
-        }
-        #centered-sentence {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 24px;
-            opacity: 0; /* Initially hidden */
-            text-align: center;
-        }
-        #additional-sentence {
-            color: #0056b3;
-            text-align: center;
-            font-size: 20px;
-            opacity: 0; /* Initially hidden */
-            margin-top: 20px;
-            transition: color 0.3s;
-        }
-        #additional-sentence:hover {
-            color: orange;
         }
     </style>
 </head>
@@ -513,14 +495,9 @@
             <p><a href="https://www.linkedin.com/in/alessioare"><img src="linkedin-logo.png" alt="LinkedIn Alessio A." style="width: 20px; height: 20px;">  View Profile</a></p>
         </footer>
     </div>
-    <div id="centered-sentence">Every piece of the puzzle matters in a project</div>
-    <div id="additional-sentence">Your Success is Our Commitment</div>
     <script>
         const carousel = document.querySelector('.carousel');
         const cards = document.querySelectorAll('.reference-card');
-        const navItems = document.querySelectorAll('.nav-item');
-        const centeredSentence = document.getElementById('centered-sentence');
-        const additionalSentence = document.getElementById('additional-sentence');
         let currentIndex = 0;
 
         function scrollLeft() {
@@ -546,32 +523,14 @@
             carousel.style.transform = `translateX(${offset}px)`;
         }
 
-        function animateNavItems() {
+        document.addEventListener("DOMContentLoaded", () => {
+            const navItems = document.querySelectorAll(".nav-item");
             navItems.forEach((item, index) => {
-                const delay = Math.random() * 3 + 3; // Random delay between 3-6 seconds
                 setTimeout(() => {
                     item.style.opacity = 1;
-                    item.style.transform = 'translateY(0)';
-                }, delay * 1000);
+                    item.style.transform = "translateY(0)";
+                }, 500 * index);
             });
-        }
-
-        function showCenteredSentence() {
-            setTimeout(() => {
-                centeredSentence.style.opacity = 1;
-            }, 7000); // Show after the navigation animation
-        }
-
-        function showAdditionalSentence() {
-            setTimeout(() => {
-                additionalSentence.style.opacity = 1;
-            }, 8000); // Show after the centered sentence
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            animateNavItems();
-            showCenteredSentence();
-            showAdditionalSentence();
         });
     </script>
 </body>
