@@ -65,19 +65,37 @@
             box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Increased shadow for a "lifted" effect */
             border-color: #0056b3; /* Blue border to match the theme */
         }
-        .language-level {
-            display: inline-block;
-            width: 20px;
+         .language-skill {
+            margin: 20px 0;
+        }
+        .progress-bar {
+            background-color: #f0f0f0;
+            border-radius: 13px;
+            overflow: hidden;
+        }
+        .progress-bar-inner {
             height: 20px;
-            background-color: #ddd;
-            margin-right: 2px;
+            background: linear-gradient(to right, #007BFF, #4fc3f7);
+            text-align: right;
+            padding-right: 5px;
+            line-height: 20px;
+            color: white;
+            border-radius: 12px;
         }
-        .language-level.active {
-            background-color: #0056b3;
+        .tooltip {
+            visibility: hidden;
+            background-color: black;
+            color: white;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            top: -5px;
+            right: 105%;
         }
-        .language-level:hover {
-            background-color: #004080;
-            cursor: pointer;
+        .language-skill:hover .tooltip {
+            visibility: visible;
         }
     </style>
 </head>
@@ -140,29 +158,48 @@
       <section id="languages">
             <h2>Languages</h2>
             <div class="language-skill">
-                <span>🇮🇹 Italian (Native or Bilingual):</span>
-                <div>[<span class="language-level active"></span><span class="language-level active"></span><span class="language-level active"></span><span class="language-level active"></span><span class="language-level active"></span>]</div>
+                <span>🇮🇹 Italian (Native or Bilingual)</span>
+                <div class="progress-bar">
+                    <div class="progress-bar-inner" style="width: 100%;">5/5</div>
+                    <span class="tooltip">Native Proficiency</span>
+                </div>
             </div>
             <div class="language-skill">
-                <span>🇬🇧 English (Full Professional):</span>
-                <div>[<span class="language-level active"></span><span class="language-level active"></span><span class="language-level active"></span><span class="language-level active"></span><span class="language-level"></span>]</div>
+                <span>🇬🇧 English (Full Professional)</span>
+                <div class="progress-bar">
+                    <div class="progress-bar-inner" style="width: 80%;">4/5</div>
+                    <span class="tooltip">Full Professional Proficiency</span>
+                </div>
             </div>
             <div class="language-skill">
-                <span>🇫🇷 French (Professional Working):</span>
-                <div>[<span class="language-level active"></span><span class="language-level active"></span><span class="language-level active"></span><span class="language-level"></span><span class="language-level"></span>]</div>
+                <span>🇫🇷 French (Professional Working)</span>
+                <div class="progress-bar">
+                    <div class="progress-bar-inner" style="width: 60%;">3/5</div>
+                    <span class="tooltip">Professional Working Proficiency</span>
+                </div>
             </div>
             <div class="language-skill">
-                <span>🇪🇸 Spanish (Limited Working):</span>
-                <div>[<span class="language-level active"></span><span class="language-level active"></span><span class="language-level"></span><span class="language-level"></span><span class="language-level"></span>]</div>
+                <span>🇪🇸 Spanish (Limited Working)</span>
+                <div class="progress-bar">
+                    <div class="progress-bar-inner" style="width: 40%;">2/5</div>
+                    <span class="tooltip">Limited Working Proficiency</span>
+                </div>
             </div>
             <div class="language-skill">
-                <span>🇳🇱 Dutch (Limited Working):</span>
-                <div>[<span class="language-level active"></span><span class="language-level active"></span><span class="language-level"></span><span class="language-level"></span><span class="language-level"></span>]</div>
+                <span>🇳🇱 Dutch (Limited Working)</span>
+                <div class="progress-bar">
+                    <div class="progress-bar-inner" style="width: 40%;">2/5</div>
+                    <span class="tooltip">Limited Working Proficiency</span>
+                </div>
             </div>
             <div class="language-skill">
-                <span>🇨🇳 Chinese (Elementary):</span>
-                <div>[<span class="language-level active"></span><span class="language-level"></span><span class="language-level"></span><span class="language-level"></span><span class="language-level"></span>]</div>
+                <span>🇨🇳 Chinese (Elementary)</span>
+                <div class="progress-bar">
+                    <div class="progress-bar-inner" style="width: 20%;">1/5</div>
+                    <span class="tooltip">Elementary Proficiency</span>
+                </div>
             </div>
+        </section>
             </p>
  <section id="skills">
             <h2>Skills</h2>
