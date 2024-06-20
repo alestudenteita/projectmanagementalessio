@@ -44,7 +44,7 @@
         .images img {
             margin: 0 10px;
         }
-        .certification-card, .education-card, .language-skill, .footer {
+        .certification-card, .education-card, .footer {
             background-color: #f9f9f9;
             border: 1px solid #ddd;
             padding: 10px;
@@ -57,25 +57,6 @@
             background-color: #e1f5fe;
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
             border-color: #0056b3;
-        }
-        .language-skill, .skills-list {
-            margin: 20px auto;
-            width: 50%;
-        }
-        .language-skill span {
-            display: inline-block;
-            margin-bottom: 5px;
-        }
-        .language-level {
-            display: inline-block;
-            width: 20px;
-            height: 20px;
-            background-color: #ddd;
-            margin-right: 2px;
-            border-radius: 50%;
-        }
-        .language-level.active {
-            background-color: #007BFF;
         }
         .badge-container {
             text-align: center;
@@ -94,6 +75,98 @@
         .footer img {
             vertical-align: middle;
         }
+
+        /* Language Section */
+        .language-skill {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .language-skill span {
+            margin-right: 15px;
+            font-size: 1.2em;
+        }
+        .circular-progress {
+            position: relative;
+            width: 100px;
+            height: 100px;
+        }
+        .circular-progress svg {
+            transform: rotate(-90deg);
+        }
+        .circular-progress circle {
+            width: 100%;
+            height: 100%;
+            fill: none;
+            stroke-width: 10;
+            stroke-linecap: round;
+        }
+        .circular-progress .bg {
+            stroke: #eee;
+        }
+        .circular-progress .progress {
+            stroke: #007BFF;
+            stroke-dasharray: 314;
+            stroke-dashoffset: 314;
+            transition: stroke-dashoffset 1s;
+        }
+        .tooltip {
+            position: absolute;
+            top: 110%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #333;
+            color: #fff;
+            padding: 5px;
+            border-radius: 5px;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .language-skill:hover .tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* Reference Section */
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            margin-top: 40px;
+        }
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .reference-card {
+            min-width: 300px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .carousel-button {
+            background-color: #0056b3;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .carousel-button.left {
+            left: 0;
+        }
+        .carousel-button.right {
+            right: 0;
+        }
     </style>
 </head>
 <body>
@@ -108,7 +181,8 @@
                     <li><a href="#certifications">Certifications</a></li>
                     <li><a href="#methodologies">Methodologies</a></li>
                     <li><a href="#education">Education</a></li>
-                    <li><a href="#skills">Languages and Skills</a></li>
+                    <li><a href="#languages">Languages</a></li>
+                    <li><a href="#references">References</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -201,31 +275,97 @@
                 </ul>
             </div>
         </section>
-        <section id="skills">
-            <h2>Languages and Skills</h2>
+        <section id="languages">
+            <h2>Languages</h2>
             <div class="language-skill">
-                <span>🇮🇹 Italian (Native or Bilingual):</span>
-                <div>[<span class="language-level active"></span><span class="language-level active"></span><span class="language-level active"></span><span class="language-level active"></span><span class="language-level active"></span>]</div>
+                <span>🇮🇹 Italian (Native or Bilingual)</span>
+                <div class="circular-progress">
+                    <svg>
+                        <circle class="bg" cx="50" cy="50" r="50"></circle>
+                        <circle class="progress" cx="50" cy="50" r="50" style="stroke-dashoffset: 0;"></circle>
+                    </svg>
+                    <div class="tooltip">Native Proficiency</div>
+                </div>
             </div>
             <div class="language-skill">
-                <span>🇬🇧 English (Full Professional):</span>
-                <div>[<span class="language-level active"></span><span class="language-level active"></span><span class="language-level active"></span><span class="language-level active"></span><span class="language-level"></span>]</div>
+                <span>🇬🇧 English (Full Professional)</span>
+                <div class="circular-progress">
+                    <svg>
+                        <circle class="bg" cx="50" cy="50" r="50"></circle>
+                        <circle class="progress" cx="50" cy="50" r="50" style="stroke-dashoffset: 63;"></circle>
+                    </svg>
+                    <div class="tooltip">Full Professional Proficiency</div>
+                </div>
             </div>
             <div class="language-skill">
-                <span>🇫🇷 French (Professional Working):</span>
-                <div>[<span class="language-level active"></span><span class="language-level active"></span><span class="language-level active"></span><span class="language-level"></span><span class="language-level"></span>]</div>
+                <span>🇫🇷 French (Professional Working)</span>
+                <div class="circular-progress">
+                    <svg>
+                        <circle class="bg" cx="50" cy="50" r="50"></circle>
+                        <circle class="progress" cx="50" cy="50" r="50" style="stroke-dashoffset: 126;"></circle>
+                    </svg>
+                    <div class="tooltip">Professional Working Proficiency</div>
+                </div>
             </div>
             <div class="language-skill">
-                <span>🇪🇸 Spanish (Limited Working):</span>
-                <div>[<span class="language-level active"></span><span class="language-level active"></span><span class="language-level"></span><span class="language-level"></span><span class="language-level"></span>]</div>
+                <span>🇪🇸 Spanish (Limited Working)</span>
+                <div class="circular-progress">
+                    <svg>
+                        <circle class="bg" cx="50" cy="50" r="50"></circle>
+                        <circle class="progress" cx="50" cy="50" r="50" style="stroke-dashoffset: 189;"></circle>
+                    </svg>
+                    <div class="tooltip">Limited Working Proficiency</div>
+                </div>
             </div>
             <div class="language-skill">
-                <span>🇳🇱 Dutch (Limited Working):</span>
-                <div>[<span class="language-level active"></span><span class="language-level active"></span><span class="language-level"></span><span class="language-level"></span><span class="language-level"></span>]</div>
+                <span>🇳🇱 Dutch (Limited Working)</span>
+                <div class="circular-progress">
+                    <svg>
+                        <circle class="bg" cx="50" cy="50" r="50"></circle>
+                        <circle class="progress" cx="50" cy="50" r="50" style="stroke-dashoffset: 189;"></circle>
+                    </svg>
+                    <div class="tooltip">Limited Working Proficiency</div>
+                </div>
             </div>
             <div class="language-skill">
-                <span>🇨🇳 Chinese (Elementary):</span>
-                <div>[<span class="language-level active"></span><span class="language-level"></span><span class="language-level"></span><span class="language-level"></span><span class="language-level"></span>]</div>
+                <span>🇨🇳 Chinese (Elementary)</span>
+                <div class="circular-progress">
+                    <svg>
+                        <circle class="bg" cx="50" cy="50" r="50"></circle>
+                        <circle class="progress" cx="50" cy="50" r="50" style="stroke-dashoffset: 252;"></circle>
+                    </svg>
+                    <div class="tooltip">Elementary Proficiency</div>
+                </div>
+            </div>
+        </section>
+        <section id="references">
+            <h2>References</h2>
+            <div class="carousel-container">
+                <button class="carousel-button left" onclick="scrollLeft()">&#9664;</button>
+                <div class="carousel">
+                    <div class="reference-card">
+                        <h3>John Doe</h3>
+                        <p>Alessio is a dedicated professional with exceptional project management skills.</p>
+                    </div>
+                    <div class="reference-card">
+                        <h3>Jane Smith</h3>
+                        <p>Alessio has a great eye for detail and always delivers projects on time.</p>
+                    </div>
+                    <div class="reference-card">
+                        <h3>Mike Johnson</h3>
+                        <p>Working with Alessio has been a pleasure. He is knowledgeable and very supportive.</p>
+                    </div>
+                    <div class="reference-card">
+                        <h3>Susan Williams</h3>
+                        <p>Alessio’s expertise in project management is outstanding. He is a great team player.</p>
+                    </div>
+                    <div class="reference-card">
+                        <h3>Tom Brown</h3>
+                        <p>Alessio’s strategic approach to project management is impressive and effective.</p>
+                    </div>
+                    <!-- Add more references as needed -->
+                </div>
+                <button class="carousel-button right" onclick="scrollRight()">&#9654;</button>
             </div>
         </section>
         <footer id="contact" class="footer">
@@ -234,5 +374,41 @@
             <p><a href="https://www.linkedin.com/in/alessioare"><img src="linkedin-logo.png" alt="LinkedIn Alessio Are" style="width: 20px; height: 20px;">  View Profile</a></p>
         </footer>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const progressBars = document.querySelectorAll('.circular-progress .progress');
+            progressBars.forEach((bar) => {
+                const value = bar.getAttribute('style').match(/stroke-dashoffset: (\d+)/)[1];
+                bar.style.strokeDashoffset = value;
+            });
+        });
+
+        const carousel = document.querySelector('.carousel');
+        const cards = document.querySelectorAll('.reference-card');
+        let currentIndex = 0;
+
+        function scrollLeft() {
+            if (currentIndex === 0) {
+                currentIndex = cards.length - 1;
+            } else {
+                currentIndex--;
+            }
+            updateCarousel();
+        }
+
+        function scrollRight() {
+            if (currentIndex === cards.length - 1) {
+                currentIndex = 0;
+            } else {
+                currentIndex++;
+            }
+            updateCarousel();
+        }
+
+        function updateCarousel() {
+            const offset = -currentIndex * (cards[0].offsetWidth + 20); // 20 is the margin
+            carousel.style.transform = `translateX(${offset}px)`;
+        }
+    </script>
 </body>
 </html>
