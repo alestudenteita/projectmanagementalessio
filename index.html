@@ -75,85 +75,95 @@
         .footer img {
             vertical-align: middle;
         }
-/* Language Section */
-.languages-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px;
-}
-.language-skill {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 200px;
-    padding: 10px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    text-align: center;
-    transition: all 0.3s ease;
-}
-.language-skill:hover {
-    background-color: #e1f5fe;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    border-color: #0056b3;
-}
-.language-skill span {
-    margin-bottom: 10px;
-    font-size: 1.1em;
-}
-.progress-bar {
-    width: 100%;
-    background-color: #eee;
-    border-radius: 5px;
-    overflow: hidden;
-    height: 20px;
-}
-.progress-bar-inner {
-    height: 100%;
-    background: linear-gradient(to right, #007BFF, #4fc3f7);
-    text-align: center;
-    line-height: 20px;
-    color: white;
-    border-radius: 5px;
-    transition: width 1s ease-in-out;
-}
-
-
+        /* Language Section */
+        .languages-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+        }
+        .language-skill {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 200px;
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        .language-skill:hover {
+            background-color: #e1f5fe;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            border-color: #0056b3;
+        }
+        .language-skill span {
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        .progress-bar {
+            width: 100%;
+            background-color: #eee;
+            border-radius: 5px;
+            overflow: hidden;
+            height: 20px;
+        }
+        .progress-bar-inner {
+            height: 100%;
+            background: linear-gradient(to right, #007BFF, #4fc3f7);
+            text-align: center;
+            line-height: 20px;
+            color: white;
+            border-radius: 5px;
+            transition: width 1s ease-in-out;
+        }
         /* Reference Section */
-.reference-card {
-    min-width: 300px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    margin: 10px;
-    text-align: left; /* Changed from center to left */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-}
-.reference-card p {
-    margin: 0 10px; /* Added margin for text */
-}
-.carousel-button {
-    background-color: #0056b3;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-}
-.carousel-button.left {
-    left: 0;
-}
-.carousel-button.right {
-    right: 0;
-}
-
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            margin-top: 40px;
+        }
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .reference-card {
+            min-width: 300px;
+            max-width: 400px;  /* Ensure cards have a max width for better readability */
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 10px;
+            text-align: justify;  /* Ensure text is justified for readability */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        .reference-card p {
+            margin: 0;  /* Ensure no extra margin */
+        }
+        .carousel-button {
+            background-color: #0056b3;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .carousel-button.left {
+            left: 0;
+        }
+        .carousel-button.right {
+            right: 0;
+        }
     </style>
 </head>
 <body>
@@ -262,54 +272,54 @@
                 </ul>
             </div>
         </section>
-<section id="languages">
-    <h2>Languages</h2>
-    <div class="languages-container">
-        <div class="language-skill">
-            <span>🇮🇹 Italian (Native)</span>
-            <div class="progress-bar">
-                <div class="progress-bar-inner" style="width: 100%;">100%</div>
+        <section id="languages">
+            <h2>Languages</h2>
+            <div class="languages-container">
+                <div class="language-skill">
+                    <span>🇮🇹 Italian (Native)</span>
+                    <div class="progress-bar">
+                        <div class="progress-bar-inner" style="width: 100%;">100%</div>
+                    </div>
+                </div>
+                <div class="language-skill">
+                    <span>🇬🇧 English (Professional)</span>
+                    <div class="progress-bar">
+                        <div class="progress-bar-inner" style="width: 100%;">100%</div>
+                    </div>
+                </div>
+                <div class="language-skill">
+                    <span>🇫🇷 French (Professional)</span>
+                    <div class="progress-bar">
+                        <div class="progress-bar-inner" style="width: 80%;">80%</div>
+                    </div>
+                </div>
+                <div class="language-skill">
+                    <span>🇪🇸 Spanish (Limited)</span>
+                    <div class="progress-bar">
+                        <div class="progress-bar-inner" style="width: 40%;">40%</div>
+                    </div>
+                </div>
+                <div class="language-skill">
+                    <span>🇳🇱 Dutch (Limited)</span>
+                    <div class="progress-bar">
+                        <div class="progress-bar-inner" style="width: 40%;">40%</div>
+                    </div>
+                </div>
+                <div class="language-skill">
+                    <span>🇨🇳 Chinese (Elementary)</span>
+                    <div class="progress-bar">
+                        <div class="progress-bar-inner" style="width: 20%;">20%</div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="language-skill">
-            <span>🇬🇧 English (Professional)</span>
-            <div class="progress-bar">
-                <div class="progress-bar-inner" style="width: 100%;">100%</div>
-            </div>
-        </div>
-        <div class="language-skill">
-            <span>🇫🇷 French (Professional)</span>
-            <div class="progress-bar">
-                <div class="progress-bar-inner" style="width: 80%;">80%</div>
-            </div>
-        </div>
-        <div class="language-skill">
-            <span>🇪🇸 Spanish (Limited)</span>
-            <div class="progress-bar">
-                <div class="progress-bar-inner" style="width: 40%;">40%</div>
-            </div>
-        </div>
-        <div class="language-skill">
-            <span>🇳🇱 Dutch (Limited)</span>
-            <div class="progress-bar">
-                <div class="progress-bar-inner" style="width: 40%;">40%</div>
-            </div>
-        </div>
-        <div class="language-skill">
-            <span>🇨🇳 Chinese (Elementary)</span>
-            <div class="progress-bar">
-                <div class="progress-bar-inner" style="width: 20%;">20%</div>
-            </div>
-        </div>
-    </div>
-</section>
+        </section>
         <section id="references">
-    <h2>References</h2>
-    <div class="carousel-container">
-        <button class="carousel-button left" onclick="scrollLeft()">&#9664;</button>
-        <div class="carousel">
-            <div class="reference-card">
-                <h3>K.B.</h3>
+            <h2>References</h2>
+            <div class="carousel-container">
+                <button class="carousel-button left" onclick="scrollLeft()">&#9664;</button>
+                <div class="carousel">
+                    <div class="reference-card">
+                        <h3>K.B.</h3>
                         <p>Alessio is a highly positive, enthusiastic and energetic person. In his time at Globalinternet he demonstrated to be a valueable team player who was able getting things done. He showed to be a keen learner and always willing to pick up new things. This how he got involved in a project to implement API’s with our providers. His fluency in various languages, attention to detail and good communication skills contributed largely to the success of the project. It was a pleasure working with Alessio.</p>
                     </div>
                     <div class="reference-card">
@@ -320,18 +330,17 @@
                         <h3>N.E.</h3>
                         <p>I worked with Alessio at Globalinternet. Alessio was a pleasure to work with, always showing a positive attitude and enthusiasm. He is reliable and trustworthy, with a strong drive to deliver. Alessio was part of the pricing and delivery team who provided services to my customers, answering commercial proposals for internet solutions. Alessio would liaise with providers to get feasibility and pricing information at pre-sales stage. I appreciated his attention to details, especially when dealing with complex customer requirements. He was also in charge of managing the delivery of internet services ordered by customers. In various occasions, we worked together on difficult deliveries. Having a strong customer focus, Alessio was key to understand the issues and seek solutions with our suppliers to exceed customer expectations. I highly recommend Alessio for any business opportunity. His language skills are a valuable benefit, making him a strong asset for international companies.  I wish Alessio all the best !</p>
                     </div>
-            <div class="reference-card">
-                <h3>Susan Williams</h3>
-                <p>Alessio’s expertise in project management is outstanding. He is a great team player who is always willing to go the extra mile to ensure the success of the project. His leadership skills and dedication are commendable.</p>
+                    <div class="reference-card">
+                        <h3>Susan Williams</h3>
+                        <p>Alessio’s expertise in project management is outstanding. He is a great team player who is always willing to go the extra mile to ensure the success of the project. His leadership skills and dedication are commendable.</p>
+                    </div>
+                    <div class="reference-card">
+                        <h3>Tom Brown</h3>
+                        <p>Alessio’s strategic approach to project management is impressive and effective. He consistently delivers high-quality results and is an excellent communicator. His ability to lead and motivate the team is truly exceptional.</p>
+                    </div>
+                </div>
+                <button class="carousel-button right" onclick="scrollRight()">&#9654;</button>
             </div>
-            <div class="reference-card">
-                <h3>Tom Brown</h3>
-                <p>Alessio’s strategic approach to project management is impressive and effective. He consistently delivers high-quality results and is an excellent communicator. His ability to lead and motivate the team is truly exceptional.</p>
-            </div>
-            <!-- Add more references as needed -->
-        </div>
-        <button class="carousel-button right" onclick="scrollRight()">&#9654;</button>
-    </div>
         </section>
         <footer id="contact" class="footer">
             <h2>Contact Information</h2>
@@ -340,38 +349,32 @@
         </footer>
     </div>
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const progressBars = document.querySelectorAll('.circular-progress .progress');
-            progressBars.forEach((bar) => {
-                const value = bar.getAttribute('style').match(/stroke-dashoffset: (\d+)/)[1];
-                bar.style.strokeDashoffset = value;
-            });
-        });
-    const carousel = document.querySelector('.carousel');
-    const cards = document.querySelectorAll('.reference-card');
-    let currentIndex = 0;
+        const carousel = document.querySelector('.carousel');
+        const cards = document.querySelectorAll('.reference-card');
+        let currentIndex = 0;
 
-    function scrollLeft() {
-        if (currentIndex === 0) {
-            currentIndex = cards.length - 1;
-        } else {
-            currentIndex--;
+        function scrollLeft() {
+            if (currentIndex === 0) {
+                currentIndex = cards.length - 1;
+            } else {
+                currentIndex--;
+            }
+            updateCarousel();
         }
-        updateCarousel();
-    }
 
-    function scrollRight() {
-        if (currentIndex === cards.length - 1) {
-            currentIndex = 0;
-        } else {
-            currentIndex++;
+        function scrollRight() {
+            if (currentIndex === cards.length - 1) {
+                currentIndex = 0;
+            } else {
+                currentIndex++;
+            }
+            updateCarousel();
         }
-        updateCarousel();
-    }
 
-    function updateCarousel() {
-        const offset = -currentIndex * (cards[0].offsetWidth + 20); // 20 is the margin
-        carousel.style.transform = `translateX(${offset}px)`;
-    }
+        function updateCarousel() {
+            const offset = -currentIndex * (cards[0].offsetWidth + 20); // 20 is the margin
+            carousel.style.transform = `translateX(${offset}px)`;
+        }
+    </script>
 </body>
 </html>
