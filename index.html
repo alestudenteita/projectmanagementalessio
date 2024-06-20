@@ -62,22 +62,45 @@
             margin: 20px auto;
             width: 50%;
         }
-        .progress-bar {
-            background-color: #f0f0f0;
-            border-radius: 13px;
-            overflow: hidden;
-            width: 100%;
-        }
-        .progress-bar-inner {
-            height: 20px;
-            background: linear-gradient(to right, #007BFF, #4fc3f7);
-            text-align: right;
-            padding-right: 5px;
-            padding-left: 5px;
-            line-height: 20px;
-            color: white;
-            border-radius: 12px;
-        }
+.progress-bar {
+    background-color: #f0f0f0;
+    border-radius: 13px;
+    overflow: hidden;
+    width: 100%; /* Ensures the progress bar fills the width of its container */
+    position: relative; /* Establishes a positioning context for absolute positioning inside */
+}
+
+.progress-bar-inner {
+    height: 20px;
+    background: linear-gradient(to right, #007BFF, #4fc3f7); /* Gradient from blue to lighter blue */
+    text-align: center; /* Aligns text to the center of the element */
+    line-height: 20px; /* Centers text vertically */
+    color: white;
+    border-radius: 12px;
+    position: absolute; /* Allows precise control over the position */
+    left: 0; /* Starts from the left edge */
+    right: 0; /* Stretches to the right edge */
+    display: flex; /* Enables flexbox properties */
+    justify-content: center; /* Centers content horizontally in a flex container */
+    align-items: center; /* Centers content vertically in a flex container */
+}
+
+.tooltip {
+    visibility: hidden;
+    background-color: black;
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    right: 105%;
+}
+
+.language-skill:hover .tooltip {
+    visibility: visible;
+}
         .badge-container {
             text-align: center;
             padding: 20px;
