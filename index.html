@@ -11,15 +11,15 @@
             color: #000;
             background-color: #fff;
             margin: 0;
-            padding: 20px;
+            padding: 0; /* Adjusted padding here to be consistent */
         }
         .container {
             max-width: 1200px;
             margin: auto;
-            padding: 20px;
+            padding: 20px; /* Provides padding around all content within the container */
         }
         header, section, footer {
-            padding: 20px;
+            padding: 20px; /* Ensures padding within each section */
             text-align: justify;
         }
         nav ul {
@@ -45,7 +45,7 @@
         .images img {
             margin: 0 10px;
         }
-        .certification-card {
+        .certification-card, .education-card, .language-skill, .footer {
             background-color: #f9f9f9;
             border: 1px solid #ddd;
             padding: 10px;
@@ -54,18 +54,12 @@
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             transition: all 0.3s ease; /* Smooth transition for hover effects */
         }
-        .certification-card h3 {
-            color: #0056b3;
-        }
-        .certification-card p {
-            margin: 10px 0;
-        }
-        .certification-card:hover {
+        .certification-card:hover, .education-card:hover {
             background-color: #e1f5fe; /* Light blue background on hover */
             box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Increased shadow for a "lifted" effect */
             border-color: #0056b3; /* Blue border to match the theme */
-          }
-        .language-skill {
+        }
+        .language-skill, .skills-list {
             margin: 20px auto; /* Center align and add vertical spacing */
             width: 50%; /* Reduce width to half of its container */
         }
@@ -79,7 +73,8 @@
             height: 20px;
             background: linear-gradient(to right, #007BFF, #4fc3f7);
             text-align: right;
-            padding-right: 5px;
+            padding-right: 5px; /* Padding for text */
+            padding-left: 10px; /* Added padding to move content away from the edge */
             line-height: 20px;
             color: white;
             border-radius: 12px;
@@ -96,38 +91,15 @@
             top: -5px;
             right: 105%;
         }
-        .language-skill:hover .tooltip {
+        .language-skill:hover .tooltip, .skills-list:hover .tooltip {
             visibility: visible;
         }
-          }
         .footer {
             text-align: center;
+            padding: 20px;
         }
         .footer img {
             vertical-align: middle;
-        }
-         .education-card {
-            background-color: #f9f9f9;
-            border: 1px solid #ddd;
-            padding: 20px;
-            margin-top: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            transition: all 0.3s ease; /* Smooth transition for hover effects */
-        }
-        .education-card:hover {
-            background-color: #e1f5fe; /* Light blue background on hover */
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Increased shadow for a "lifted" effect */
-            border-color: #0056b3; /* Blue border to match the theme */
-        }
-        h2, h3 {
-            color: #0056b3;
-        }
-        ul {
-            padding-left: 20px;
-        }
-        li {
-            margin-bottom: 10px;
         }
     </style>
 </head>
